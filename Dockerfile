@@ -18,3 +18,4 @@ EXPOSE 5500
 
 # Create an entrypoint
 ENTRYPOINT ["python", "app.py"]
+
