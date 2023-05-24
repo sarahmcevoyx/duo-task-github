@@ -5,13 +5,13 @@ FROM python:3.8
 WORKDIR /app
 
 # Install pip dependencies from requirements
-RUN pip install Flask
+RUN pip3 install -r requirements.txt
 
 # Copy contents into image
 COPY app.py .
 
 # Set YOUR_NAME environment variable
-ENV name=Sarah
+ENV YOUR_NAME=sarah
 
 # Expose the correct port
 EXPOSE 5000
