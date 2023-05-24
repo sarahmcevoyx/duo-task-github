@@ -14,7 +14,7 @@ COPY app.py .
 ENV YOUR_NAME=sarah
 
 # Expose the correct port
-EXPOSE 5000
+EXPOSE 5500
 
 # Create an entrypoint
 ENTRYPOINT ["python", "app.py"]
