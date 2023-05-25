@@ -11,12 +11,7 @@ pipeline {
         
         stage('build and run containers') {
             steps {
-                sh '''
-                docker network inspect duo-net && sleep 1 || docker network create duo-net
-                docker build -t duo-app:v1 .
-                docker run -d --network duo-net --name duo-app duo-app:v1
-                docker run -d -p 80:80 --mount type=bind,source=$(pwd)/nginx.conf,target=/etc/nginx/nginx.conf --network duo-net --name nginx nginx:alpine
-                '''
+                sh "sudo docker-compose up -d --build"
             }
         }
     }
