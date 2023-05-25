@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   duo-app:
-    build: ./duo-app
+    build: .
     ports:
     - target: 5000
       published: 5000
